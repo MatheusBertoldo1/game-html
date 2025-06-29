@@ -1,11 +1,19 @@
-* {
-    font-family:Verdana, Tahoma, sans-serif;
+@font-face {
+    font-family: "OpenSans_a";
+    src: url("../fonts/OpenSans-VariableFont_wdth\,wght.ttf") format('truetype');
+    font-display: swap;
+    font-weight: 300 800;
+}
+
+*{
+    font-family: "OpenSans_a", sans-serif;
 }
 
 :root{
-    --blue-main-color: #0077b6;
+    --blue-main-color: 0, 119, 182;
     --white-bg-color: #fafaff;
-    --h1-color: #333333;
+    --h1-color: #1c1B1d ;
+    --body-text-color: #1c1B1d;
 }
 
 html, body {
@@ -17,7 +25,7 @@ html, body {
 }
 
 header{
-    height: 50px;
+    padding: 12px 0;
     width: 100%;
     background-color: rgb(255, 255, 255);
     margin-top: 0px;
@@ -27,26 +35,35 @@ header{
     justify-content: center;
 }
 
-header nav{
-    display: inline;
-}
 
 header nav figure{
     display: inline;
 }
 
 header nav a{
-    margin-left: 35px;
+    display: inline-flex;
+    align-items: center;
+    line-height: 44px;
+    padding: 0px 24px;
     text-decoration: none;
-    text-transform: uppercase;
-    font-size: 11px;
-    font-weight: bold;
-    color: #333333;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--body-text-color);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    border-radius: 200px;
+    gap: 8px;
+    vertical-align: middle;
 }
 
 header nav a:hover{
-    color: var(--blue-main-color);
-    transition: .1s;
+    background-color: rgba(28, 27, 29, 0.08);
+    font-weight: 600;
+    transition: 0.1s;
+}
+.focused{
+    background-color: rgba(var(--blue-main-color), 0.08);
 }
 
 main {
